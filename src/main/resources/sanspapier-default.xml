@@ -1,0 +1,34 @@
+daily = true
+
+solr.url = http://192.168.1.30:8983/solr/SolrCatalog
+
+solr.fetch.size = 100000
+solr.commit.size = 400
+
+job.print = false
+
+fetch.from.solr = true
+fetch.from.db = false
+
+db.fetch.size = 10000
+db.commit.size = 100
+
+in.db.name = extract_content
+in.db.address = 192.168.1.20
+in.db.username = sp
+in.db.password = E33eur18_
+in.db.port = 3306
+
+advance.keyword.generation = true
+
+solr.additionnal.query = searchable:false
+sorl.clear.keywords = false
+solr.clear.top20 = false
+
+out.db.name = catalog_test
+out.db.address = 192.168.1.30
+out.db.username = root
+out.db.password = root
+out.db.port = 3306
+
+unitex_shared_library=/classes/libUnitexJni.so

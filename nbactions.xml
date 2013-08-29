@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath com.sp.keyword_generator.Main</exec.args>
+                <exec.executable>java</exec.executable>
+                <exec.classpathScope>runtime</exec.classpathScope>
+            </properties>
+            
+            <property>
+  <name>job.print</name>
+  <value>false</value>
+  <description>Print (true) or insert</description>
+</property>
+
+<property>
+  <name>solr.url</name>
+  <value>http://192.168.1.19:8985/solr/SolrCatalog</value>
+  <description>Solr Url </description>
+</property>
+
+
+<property>
+  <name>solr.fetch.size</name>
+  <value>100000</value>
+  <description />
+</property>
+
+<property>
+  <name>advance.keyword.generation</name>
+  <value>true</value>
+  <description />
+</property>
+
+<property>
+  <name>solr.commit.size</name>
+  <value>400</value>
+  <description />
+</property>
+
+<!--<property>
+  <name>threads</name>
+  <value>10</value>
+  <description>Number of Threads to launch</description>
+</property>
+
+<property>
+  <name>threads.priority</name>
+  <value>10</value>
+  <description>Threads priority level ( 10 : HIGH_PRIORITY , 1 : LOWEST_PRIORITY, 5 : SYSTEM_DEFAULT_PRIORITY )</description>
+</property>-->
+
+
+<property>
+  <name>db.fetch.size</name>
+  <value>10000</value>
+  <description />
+</property>
+
+
+<!-- Insert Database -->
+
+<property>
+  <name>out.db.address</name>
+  <value>192.168.1.20</value>
+  <description>Database Url to insert keywords</description>
+</property>
+
+<property>
+  <name>out.db.name</name>
+  <value>catalog_test</value>
+  <description>Database Name</description>
+</property>
+
+<property>
+  <name>out.db.port</name>
+  <value>3306</value>
+  <description>Database Port</description>
+</property>
+
+<property>
+  <name>out.db.username</name>
+  <value>sp</value>
+  <description>Database UserName</description>
+</property>
+
+<property>
+  <name>out.db.password</name>
+  <value>E33eur18_</value>
+  <description>Database Password</description>
+</property>
+
+<!-- Fetch Database -->
+
+<property>
+  <name>in.db.address</name>
+  <value>192.168.1.20</value>
+  <description>Database Url to insert keywords</description>
+</property>
+
+<property>
+  <name>in.db.name</name>
+  <value>extract_content</value>
+  <description>Database Name</description>
+</property>
+
+<property>
+  <name>in.db.port</name>
+  <value>3306</value>
+  <description>Database Port</description>
+</property>
+
+<property>
+  <name>in.db.username</name>
+  <value>sp</value>
+  <description>Database UserName</description>
+</property>
+
+<property>
+  <name>in.db.password</name>
+  <value>E33eur18_</value>
+  <description>Database Password</description>
+</property>
+
+        </action>
+        
+        
+    </actions>
